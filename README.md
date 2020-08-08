@@ -39,8 +39,11 @@
 
         app.listen(8000, () => console.log("App is listening on port 8000")); //Two parameters 1. what port to listen in and 2. (callback) what to do once it's listening. 
     
+8. Install nodemon so that you don't have to manually update the server everytime there is a change. 
+
+    a. npm install --save-dev nodemon
     
-8. Run the project like this, npx babel-node src/server.js
+8. Run the project like this, npx babel-node src/server.js (need to update the server each time) or npx nodemon --exec npx babel-node src/server.js (no need to update the terminal each time for a server update). If you don't want to write the long npx nodemon..., then you can simply on package.json under "scripts" add "start" and insert "npx nodemon --exec npx babel-node src/server.js" under it.  
     
 9. In order to read the JSON data being sent, we need to do the below. 
 
@@ -55,4 +58,6 @@
 11. Display your name on the Postman. 
 
          app.post("/hello", (req, res) => res.send(`Hello ${req.body.name}!`));
+         
+
 
