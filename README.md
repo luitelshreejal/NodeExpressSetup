@@ -51,3 +51,8 @@
         import bodyParser from "body-parser";
         
         app.use(bodyParser.json()); //parses the JSON object that we've included with our post request and it adds a body property to the request parameter. 
+        
+11. Display your name on the Postman. 
+
+         app.post("/hello", (req, res) => res.send(`Hello ${req.body.name}!`));
+
