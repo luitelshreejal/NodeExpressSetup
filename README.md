@@ -23,19 +23,20 @@
 
 6. In .babel.rc insert the following:
 
-    {
-      "presets": ["@babel/preset-env]
+        {
     
-    }
+        "presets": ["@babel/preset-env]
+    
+        }
 
 7. In server.js code write the below. 
 
-    import express from "express"; 
+        import express from "express"; 
 
-    const app = express(); //app object.
+        const app = express(); //app object.
 
-    app.get("/hello", (req, res) => res.send("hello")); //within localhost:8000/hello, once the request is receive respond with hello (as a callback). 
+        app.get("/hello", (req, res) => res.send("hello")); //within localhost:8000/hello, once the request is receive respond with hello (as a callback). 
 
-    app.listen(8000, () => console.log("App is listening on port 8000")); //Two parameters 1. what port to listen in and 2. (callback) what to do once it's listening. 
+        app.listen(8000, () => console.log("App is listening on port 8000")); //Two parameters 1. what port to listen in and 2. (callback) what to do once it's listening. 
     
     
