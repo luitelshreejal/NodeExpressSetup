@@ -45,3 +45,9 @@
 9. In order to read the JSON data being sent, we need to do the below. 
 
     a. npm install --save body-parser
+    
+10. To analyze the JSON files, we need to:
+
+        import bodyParser from "body-parser";
+        
+        app.use(bodyParser.json()); //parses the JSON object that we've included with our post request and it adds a body property to the request parameter. 
